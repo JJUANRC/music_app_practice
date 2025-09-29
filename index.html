@@ -1,43 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles.css">
-    <script type="module" src="./main.js"></script>
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <div class="music-player">
-            <nav>
-                <div class="circle">
-                    <span>back</span>
+        <div class="main-player">
+            <div class="album-cover">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJhLBkNYDMb3ZmHL39_JS5OPx2pbrSqk-zkg&s" alt="Album Cover">
+            </div>
+            
+            <div class="song-info">
+                <h1>DUKI || BZRP Music Sessions #50</h1>
+                <p>Bizarrap y Duki</p>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-handle"></div>
                 </div>
-                <div class="circle">
-                    <span>bars</span>
+            </div>
+                        <div class="controls">
+                <button class="control-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                        <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+                    </svg>
+                </button>
+                
+                <button class="control-btn play-btn">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </button>
+                
+                <button class="control-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                        <path d="M16 18h2V6h-2zm-3.5-6L4 6v12z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="playlist">
+            <div class="song-item">
+                <img src="https://i.scdn.co/image/ab67616d0000b27388f6edefe32e6d715a4f6653" alt="Cover" class="song-thumb">
+                <div class="song-details">
+                    <h3>Entre nosotros</h3>
+                    <p>Tiago PZK y Lit Killah</p>
+                    <span class="duration">3:13</span>
                 </div>
-            </nav>
-
-            <div id="song-details">
-                <img src="./media/default_img.jpg" alt="" id="song-img">
-                <h1 id="title"></h1>
-                <h3 id="artist"></h3>
             </div>
-
-            <div class="audio">
-                <audio controls id="media" hidden>
-                    <!--<source id="audio" src="" type="audio/mpeg">-->
-                </audio>
-                <input type="range" value="0" id="progress">
+            <div class="song-item">
+                <img src="https://images.genius.com/9681b9e920d13b668aa3a4308da2eddf.1000x1000x1.jpg" alt="Cover" class="song-thumb">
+                <div class="song-details">
+                    <h3>Primera cita</h3>
+                    <p>Carin Leon</p>
+                    <span class="duration">3:07</span>
+                </div>
             </div>
-
-            <div class="song-controls">
-                <span id="lastest">last</span>
-                <span id="play" class="play">play</span>
-                <span id="forward">forward</span>
+            <div class="song-item">
+                <img src="https://i.scdn.co/image/ab67616d0000b273af4cda919c19670274033dca" alt="Cover" class="song-thumb">
+                <div class="song-details">
+                    <h3>No te contaron mal</h3>
+                    <p>Christian Nodal</p>
+                    <span class="duration">2:37</span>
+                </div>
             </div>
-
+            <div class="song-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq_kYpTcpSvwW4u6v94Pi6mdpsG5apc97xwA&s" alt="Cover" class="song-thumb">
+                <div class="song-details">
+                    <h3>Quevedo: Bzrp Music Sessions, Vol. 52</h3>
+                    <p>Bizarrap y Quevedo</p>
+                    <span class="duration">3:19</span>
+                </div>
+            </div>
+            <div class="song-item">
+                <img src="https://i.scdn.co/image/ab67616d0000b273d7079d75e4e0c3959ca46e23" alt="Cover" class="song-thumb">
+                <div class="song-details">
+                    <h3>Que triste</h3>
+                    <p>Piso 21 y Carin leon</p>
+                    <span class="duration">3:47</span>
+                </div>
+            </div>
         </div>
     </div>
 </body>
