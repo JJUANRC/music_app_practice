@@ -1,10 +1,12 @@
 <h1>
-    Queue
+    Queue ({{playlist().length}} canciones)
 </h1>
 <div class="content">
     @for(song of playlist(); track song.name){
         <app-song-info [song]="song" displayMode="card"></app-song-info>
     } @empty {
-        
+        <p style="color: white; text-align: center; padding: 20px;">
+            No hay canciones en la cola
+        </p>
     }
 </div>

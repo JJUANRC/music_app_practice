@@ -1,0 +1,32 @@
+@if (isLoading) {
+    <!-- Pantalla de carga: se muestra HASTA que todos los datos estén listos -->
+    <div class="loading-screen">
+        <div class="loading-container">
+            <h2>🎵 Cargando Spotify...</h2>
+            <p>Esperando datos de la playlist</p>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+} @else if (hasError) {
+    <!-- Pantalla de error -->
+    <div class="error-screen">
+        <div class="error-container">
+            <h2>❌ Error</h2>
+            <p>{{errorMessage}}</p>
+            <button (click)="loadPlaylist()">Reintentar</button>
+        </div>
+    </div>
+} @else {
+    <!-- Vista principal: solo se renderiza cuando TODOS los datos están listos -->
+    <div id="main">
+        @if (song) {
+            <app-song-info [song]="song" displayMode="main"></app-song-info>
+        }
+        
+        @if (playlist.length > 0) {
+            <app-playlist [playlist]="playlist"></app-playlist>
+        }
+    </div>
+}
+
+<app-audio-controller></app-audio-controller>
