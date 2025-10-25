@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a1929 0%, #1a3a52 50%, #1e4976 100%);
+  color: #e3f2fd;
+}
+
+:root {
+  --blue-950: #0a1929;
+  --blue-900: #1a3a52;
+  --blue-800: #2c5f8d;
+  --blue-700: #3d7fb8;
+  --blue-600: #4e9dd9;
+  --blue-500: #64b5f6;
+  --blue-400: #90caf9;
+  --blue-300: #bbdefb;
+  --blue-200: #e3f2fd;
+  --blue-100: #f3f9ff;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--blue-950);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blue-700);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-600);
+}
