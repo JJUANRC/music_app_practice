@@ -7,21 +7,23 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   overflow: hidden;
-  background: linear-gradient(135deg, #0a1929 0%, #1a3a52 50%, #1e4976 100%);
-  color: #e3f2fd;
+  background: linear-gradient(135deg, #001449 0%, #012677 50%, #001449 100%);
+  color: #e8f0f7;
 }
 
 :root {
-  --blue-950: #0a1929;
-  --blue-900: #1a3a52;
-  --blue-800: #2c5f8d;
-  --blue-700: #3d7fb8;
-  --blue-600: #4e9dd9;
-  --blue-500: #64b5f6;
-  --blue-400: #90caf9;
-  --blue-300: #bbdefb;
-  --blue-200: #e3f2fd;
-  --blue-100: #f3f9ff;
+  --dark-navy: #001449;
+  --navy: #012677;
+  --blue: #005bc5;
+  --light-blue: #00b4fc;
+  --cyan: #17f9ff;
+  --dark-gray: #1C1919;
+  
+  --navy-light: #013a9e;
+  --blue-dark: #004a9f;
+  --text-primary: #e8f0f7;
+  --text-secondary: #b8c9d8;
+  --text-muted: #7a8fa4;
 }
 
 input:focus {
@@ -37,7 +39,7 @@ button {
 
 button:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 img {
@@ -46,19 +48,19 @@ img {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--blue-950);
+  background: var(--dark-navy);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--blue-700);
-  border-radius: 4px;
+  background: var(--blue);
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--blue-600);
+  background: var(--light-blue);
 }

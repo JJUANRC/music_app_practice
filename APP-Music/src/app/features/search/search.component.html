@@ -1,0 +1,48 @@
+<div class="search-container">
+  <div class="main-content">
+    <div *ngIf="isSearching; else currentTrackView">
+      <h2 class="search-title">Resultados de búsqueda</h2>
+      <div class="results-grid">
+        <div
+          *ngFor="let track of searchResults"
+          (click)="selectTrack(track)"
+          class="track-card">
+          <div class="track-image-container">
+            <img [src]="track.image" [alt]="track.name" class="track-image" />
+          </div>
+          <h3 class="track-name">{{ track.name }}</h3>
+          <p class="track-artist">{{ track.artist }}</p>
+          <p class="track-album">{{ track.album }}</p>
+        </div>
+      </div>
+      <p *ngIf="searchResults.length === 0 && searchQuery" class="no-results">
+        No se encontraron resultados
+      </p>
+    </div>
+
+    <ng-template #currentTrackView>
+      <div class="current-track-container">
+        <div *ngIf="currentTrack; else noTrack" class="current-track">
+          <div class="vinyl-container">
+            <img 
+              [src]="currentTrack.image" 
+              [alt]="currentTrack.name"
+              class="current-track-image"
+            />
+            <div class="vinyl-reflection"></div>
+          </div>
+          <h1 class="current-track-name">{{ currentTrack.name }}</h1>
+          <p class="current-track-artist">{{ currentTrack.artist }}</p>
+          <p class="current-track-album">{{ currentTrack.album }}</p>
+        </div>
+        <ng-template #noTrack>
+          <div class="no-track">
+            <p>Selecciona una canción para comenzar</p>
+          </div>
+        </ng-template>
+      </div>
+    </ng-template>
+  </div>
+
+  <app-static-child></app-static-child>
+</div>

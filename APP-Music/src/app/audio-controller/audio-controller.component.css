@@ -1,0 +1,104 @@
+.controller-container {
+  background: linear-gradient(90deg, var(--dark-navy) 0%, var(--navy) 100%);
+  border-top: 2px solid var(--blue);
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+}
+
+.controller-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+
+.control-btn {
+  border-radius: 50%;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.control-btn-secondary {
+  padding: 14px;
+  background: var(--blue-dark);
+  border: 1px solid var(--blue);
+  width: 60px;
+  height: 60px;
+}
+
+.control-btn-secondary:hover:not(:disabled) {
+  background: var(--blue);
+  transform: scale(1.05);
+}
+
+.control-btn-secondary:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.control-btn-primary {
+  padding: 18px;
+  background: var(--blue);
+  border: 2px solid var(--light-blue);
+  width: 80px;
+  height: 80px;
+}
+
+.control-btn-primary:hover:not(:disabled) {
+  background: var(--light-blue);
+  transform: scale(1.1);
+}
+
+.control-btn-primary:active:not(:disabled) {
+  transform: scale(1);
+}
+
+.control-text {
+  color: var(--text-primary);
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.control-text-large {
+  font-size: 28px;
+}
+
+.control-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .controller-content {
+    gap: 20px;
+  }
+  
+  .control-btn-secondary {
+    padding: 12px;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .control-btn-primary {
+    padding: 16px;
+    width: 70px;
+    height: 70px;
+  }
+  
+  .control-text {
+    font-size: 18px;
+  }
+  
+  .control-text-large {
+    font-size: 24px;
+  }
+}

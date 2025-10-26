@@ -1,0 +1,31 @@
+<div class="controller-container">
+  <div class="controller-content">
+    <button
+      (click)="previous()"
+      [disabled]="!currentTrack"
+      class="control-btn control-btn-secondary"
+      title="Anterior"
+    >
+      <span class="control-text">|◀</span>
+    </button>
+    
+    <button
+      (click)="togglePlayPause()"
+      [disabled]="!currentTrack"
+      class="control-btn control-btn-primary"
+      [title]="isPlaying ? 'Pausar' : 'Reproducir'"
+    >
+      <span *ngIf="!isPlaying" class="control-text control-text-large">▶</span>
+      <span *ngIf="isPlaying" class="control-text control-text-large">❚❚</span>
+    </button>
+    
+    <button
+      (click)="next()"
+      [disabled]="!currentTrack"
+      class="control-btn control-btn-secondary"
+      title="Siguiente"
+    >
+      <span class="control-text">▶|</span>
+    </button>
+  </div>
+</div>

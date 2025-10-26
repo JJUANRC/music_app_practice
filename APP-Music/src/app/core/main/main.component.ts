@@ -8,8 +8,8 @@ import { ViewComponentComponent } from '../view-component/view-component.compone
   selector: 'app-main',
   standalone: true,
   imports: [CommonModule, RouterOutlet, ViewComponentComponent],
-  template: `<app-view-component></app-view-component>`,
-  styles: []
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
   constructor(private authService: SpotifyAuthService) {}

@@ -1,0 +1,13 @@
+.app-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, var(--dark-navy) 0%, var(--navy) 50%, var(--dark-navy) 100%);
+}
+
+.content-area {
+  flex: 1;
+  margin-top: 80px;
+  margin-bottom: 96px;
+  overflow: hidden;
+}

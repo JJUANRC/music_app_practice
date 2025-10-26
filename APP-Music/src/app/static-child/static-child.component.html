@@ -1,0 +1,30 @@
+<div class="playlist-container">
+  <h2 class="playlist-title">
+    Playlist Actual
+  </h2>
+  
+  <div
+    *ngFor="let track of playlist; let i = index"
+    [class]="getTrackClass(track)"
+    (click)="selectTrack(track)"
+  >
+    <div class="track-number">{{ i + 1 }}</div>
+    <div class="track-content">
+      <img [src]="track.image" [alt]="track.name" class="track-thumb" />
+      <div class="track-info">
+        <h3 class="track-info-name">{{ track.name }}</h3>
+        <p class="track-info-artist">{{ track.artist }}</p>
+        <p class="track-info-album">{{ track.album }}</p>
+      </div>
+    </div>
+    <div class="track-playing-indicator" *ngIf="currentTrack?.id === track.id">
+      <div class="bar bar1"></div>
+      <div class="bar bar2"></div>
+      <div class="bar bar3"></div>
+    </div>
+  </div>
+  
+  <p *ngIf="playlist.length === 0" class="empty-playlist">
+    La playlist está vacía
+  </p>
+</div>
